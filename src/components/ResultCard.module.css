@@ -1,0 +1,14 @@
+.resultcard__wrapper {
+    position: absolute;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    transform: rotate(-30deg);
+    color: white;
+}

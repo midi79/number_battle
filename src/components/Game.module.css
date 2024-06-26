@@ -1,0 +1,13 @@
+.game__wrapper {
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.game__result__card {
+    display: flex;
+    width: 95%;
+    justify-content: flex-start;
+}
