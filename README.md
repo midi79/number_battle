@@ -1,30 +1,29 @@
-# React + TypeScript + Vite
+# React Number Battle Game
+Two players battle with numbers; each player should generate four-digit numbers and compare them.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Screenshot
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![스크린샷 2024-06-27 오전 1 17 15](https://github.com/midi79/number_battle/assets/19512435/85d031a5-1a2e-4bd7-bba2-04e17c58c333)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Library
 
-- Configure the top-level `parserOptions` property like this:
+-   npm install zustand
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+## Main features
+
+-   Generate random number
+-   Compare each number every turn
+-   Show the result every turn
+
+
+## To-do
+
+-   Show the final result and reset the game
+-   Auto-generate the player1 numbers
+-   Apply machine learn algorithm when player1 generates the number -> To get more wins
+-   Online multiplayer -> It needs backend server
