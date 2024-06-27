@@ -12,6 +12,8 @@ const useResultStore = create((set: any, get: any) => ({
     getFirstPlayerWinTotal: () => get().firstPlayerResult.filter((item: string) => item === "WIN").length,
 
     getSecondPlayerWinTotal: () => get().secondPlayerResult.filter((item: string) => item === "WIN").length,
+
+    resetResult: () => set(() => ({ firstPlayerResult: [], secondPlayerResult: [] })),
 }));
 
 export default useResultStore;

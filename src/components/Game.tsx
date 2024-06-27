@@ -3,10 +3,14 @@ import styles from "./Game.module.css";
 import CardGroup from "./CardGroup";
 import BigCardGroup from "./BigCardGroup";
 import useCardNumberStore from "../store/cardNumber";
+import GameOver from "./GameOver";
+import useResultStore from "../store/result";
 
 const Game = () => {
     const [cardNumbers, setCardNumbers] = useState<number[]>([]);
-    const { firstPlayerNumbers: first, secondPlayerNumbers: second } = useCardNumberStore();
+    const [isOver, setIsOver] = useState<boolean>(false);
+    const { firstPlayerNumbers: first, secondPlayerNumbers: second, resetNumbers } = useCardNumberStore();
+    const { resetResult } = useResultStore();
     const arrayCount = first.length > second.length ? first.length : second.length;
 
     const generateRandomNumbers = (): number[] => {
@@ -29,6 +33,26 @@ const Game = () => {
         }
     }, []);
 
+    useEffect(() => {
+        if (first.length === 10 && second.length === 10) {
+            setIsOver(true);
+        }
+    }, [first, second]);
+
+    const onGameOverHandler = () => {
+        setIsOver(false);
+        resetGame();
+    };
+
+    const resetGame = () => {
+        const numberArray = generateRandomNumbers();
+        if (numberArray) {
+            setCardNumbers(numberArray);
+        }
+        resetNumbers();
+        resetResult();
+    };
+
     return (
         <main className={styles.game__wrapper}>
             <CardGroup numbers={cardNumbers} player="player1" />
@@ -38,6 +62,7 @@ const Game = () => {
                 ))}
             </div>
             <CardGroup numbers={cardNumbers} player="player2" />
+            {isOver && <GameOver onClose={onGameOverHandler} />}
         </main>
     );
 };

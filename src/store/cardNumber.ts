@@ -13,6 +13,8 @@ const useCardNumberStore = create((set: any, get: any) => ({
         get().firstPlayerNumbers.reduce((total: number, numberVal: number) => total + numberVal, 0),
     getSecondPlayerNumberTotal: () =>
         get().secondPlayerNumbers.reduce((total: number, numberVal: number) => total + numberVal, 0),
+
+    resetNumbers: () => set(() => ({ firstPlayerNumbers: [], secondPlayerNumbers: [] })),
 }));
 
 export default useCardNumberStore;
