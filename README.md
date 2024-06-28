@@ -1,6 +1,6 @@
-# React Number Battle Game
-Two players battle with numbers; each player should generate four-digit numbers and compare them.
-
+# React Number Battle Game 
+Two players battle with numbers; each player should generate four-digit numbers and compare them. <br>
+ * This source is the origin of other branches
 
 ## Screenshot
 
