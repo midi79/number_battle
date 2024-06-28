@@ -1,6 +1,7 @@
-# number_battle
+# number_battle base sources
 
-Generate the bigger number and get win
+Generate the bigger number and get win <br>
+* This source is the origin of other branches
 
 # React Number Battle Game
 
