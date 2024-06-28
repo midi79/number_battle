@@ -9,5 +9,6 @@
 .game__result__card {
     display: flex;
     width: 95%;
+    height: 260px;
     justify-content: flex-start;
 }

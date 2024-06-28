@@ -9,6 +9,7 @@ import useResultStore from "../store/result";
 const Game = () => {
     const [cardNumbers, setCardNumbers] = useState<number[]>([]);
     const [isOver, setIsOver] = useState<boolean>(false);
+    const [isPlayerTurn, setIsPlayerTurn] = useState<boolean>(false);
     const { firstPlayerNumbers: first, secondPlayerNumbers: second, resetNumbers } = useCardNumberStore();
     const { resetResult } = useResultStore();
     const arrayCount = first.length > second.length ? first.length : second.length;
@@ -55,13 +56,24 @@ const Game = () => {
 
     return (
         <main className={styles.game__wrapper}>
-            <CardGroup numbers={cardNumbers} player="player1" />
+            <CardGroup
+                numbers={cardNumbers}
+                player="player1"
+                isPlayerTurn={isPlayerTurn}
+                setIsPlayerTurn={setIsPlayerTurn}
+            />
             <div className={styles.game__result__card}>
                 {[...new Array(arrayCount)].map((_, index) => (
                     <BigCardGroup firstValue={first[index]} secondValue={second[index]} key={index} />
                 ))}
             </div>
-            <CardGroup numbers={cardNumbers} player="player2" isFlip={false} />
+            <CardGroup
+                numbers={cardNumbers}
+                player="player2"
+                isFlip={false}
+                isPlayerTurn={isPlayerTurn}
+                setIsPlayerTurn={setIsPlayerTurn}
+            />
             {isOver && <GameOver onClose={onGameOverHandler} />}
         </main>
     );
