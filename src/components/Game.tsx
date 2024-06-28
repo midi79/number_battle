@@ -61,7 +61,7 @@ const Game = () => {
                     <BigCardGroup firstValue={first[index]} secondValue={second[index]} key={index} />
                 ))}
             </div>
-            <CardGroup numbers={cardNumbers} player="player2" />
+            <CardGroup numbers={cardNumbers} player="player2" isFlip={false} />
             {isOver && <GameOver onClose={onGameOverHandler} />}
         </main>
     );

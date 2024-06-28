@@ -8,9 +8,10 @@ import useResultStore from "../store/result";
 interface ICardGroupProps {
     numbers: number[];
     player: string;
+    isFlip?: boolean;
 }
 
-const CardGroup = ({ numbers, player }: ICardGroupProps) => {
+const CardGroup = ({ numbers, player, isFlip = true }: ICardGroupProps) => {
     const [cardNumbers, setCardNumbers] = useState<number[]>([]);
     const numberRef = useRef(0);
     const { setFirstPlayerNumber, setSecondPlayerNumber, getFirstPlayerNumberTotal, getSecondPlayerNumberTotal } =
@@ -49,7 +50,7 @@ const CardGroup = ({ numbers, player }: ICardGroupProps) => {
             <div className={styles.cardgroup__cards}>
                 {cardNumbers &&
                     cardNumbers.map((numberVal, index) => (
-                        <Card numberVal={numberVal} isFlip={false} key={index} onClickHandler={onRemoveCardHandler} />
+                        <Card numberVal={numberVal} isFlip={isFlip} key={index} onClickHandler={onRemoveCardHandler} />
                     ))}
             </div>
             <ScoreBoard
