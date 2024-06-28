@@ -1,0 +1,28 @@
+.scoreboard__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 40px 20px 40px;
+}
+
+.scoreboard__type {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.scoreboard__value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    border: 2px solid #515151;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 35px;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 2px #a1a1a1;
+}

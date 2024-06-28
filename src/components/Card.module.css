@@ -1,0 +1,30 @@
+.card__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 140px;
+    font-size: 20;
+    font-weight: 600;
+    color: cadetblue;
+    border-radius: 8px;
+    background-color: #b0b0b0;
+    box-shadow: 3px 3px 3px #cbcbcbe2;
+    cursor: pointer;
+}
+
+.card__inner__line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 84px;
+    height: 120px;
+    background-color: #9c9c9c;
+    border-radius: 8px;
+}
+
+.card__value {
+    font-size: 40px;
+    font-weight: 700;
+    color: azure;
+}

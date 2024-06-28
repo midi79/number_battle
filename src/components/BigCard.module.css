@@ -1,0 +1,18 @@
+.bigcard__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 120px;
+    color: #7083ab;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px #cbcbcbe2;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.bigcard__value {
+    font-size: 30px;
+    font-weight: 700;
+    color: azure;
+}

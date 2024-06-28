@@ -1,0 +1,15 @@
+.cardgroup__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+
+.cardgroup__cards {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 1150px;
+    gap: 10px;
+}
