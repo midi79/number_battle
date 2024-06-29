@@ -40,6 +40,25 @@ const CardGroup = ({ numbers, player, isFlip = true, isPlayerTurn, setIsPlayerTu
         }
     };
 
+    // Player1 generate random combination of two numbers in each turn
+    const setRandomNumber = () => {
+        const numbers = [...cardNumbers];
+        let first = 0;
+        let last = 0;
+
+        while (first <= last) {
+            first = numbers[Math.floor(Math.random() * numbers.length)];
+            last = numbers[Math.floor(Math.random() * numbers.length)];
+        }
+
+        const numberVal = first * 100 + last;
+
+        setCardNumbers((prev) => prev.filter((item) => item !== first && item !== last));
+        setFirstPlayerNumber(numberVal);
+        setIsPlayerTurn(!isPlayerTurn);
+    };
+
+    // Player1 generate the biggest number in each turn
     const setBiggestNumber = () => {
         const numbers = [...cardNumbers];
         numbers.sort(function (a, b) {
@@ -57,7 +76,7 @@ const CardGroup = ({ numbers, player, isFlip = true, isPlayerTurn, setIsPlayerTu
 
     useEffect(() => {
         if (player === "player1" && isPlayerTurn) {
-            setBiggestNumber();
+            setRandomNumber();
         }
     }, [isPlayerTurn]);
 
