@@ -27,7 +27,6 @@ Two players battle with numbers; each player should generate four-digit numbers 
 
 ## To-do
 
--   Show the final result and reset the game
--   Auto-generate the player1 numbers
+- Add absolute win chance - If the user uses the absolute win chance, this turn will win on any condition. Users can use it just once for a game.
 -   Apply machine learn algorithm when player1 generates the number -> To get more wins
--   Online multiplayer -> It needs backend server
+-   Online multiplayer -> It needs a backend server
