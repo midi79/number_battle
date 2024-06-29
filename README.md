@@ -8,7 +8,9 @@ Two players battle with numbers; each player should generate four-digit numbers 
 
 ## Screenshot
 
-![스크린샷 2024-06-27 오전 1 17 15](https://github.com/midi79/number_battle/assets/19512435/85d031a5-1a2e-4bd7-bba2-04e17c58c333)
+
+![스크린샷 2024-06-29 오후 4 49 51](https://github.com/midi79/number_battle/assets/19512435/c3e13007-fe7a-4cb5-a762-de3fcb3ffa46)
+
 
 ## How to run
 
